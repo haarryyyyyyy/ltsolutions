@@ -1,0 +1,428 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logo.png' %}" sizes="1x1">
+    <title>LT Solutions</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+    
+
+</head>
+
+<body>
+
+    <!-- header -->
+
+    <header class="header">
+
+        <a href="{% url 'index' %}" class="logo"> LT Solutions </a>
+
+        <nav class="navbar">
+
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="{% url 'career' %}">Careers</a>
+            <!-- <a href="#reviews">reviews</a> -->
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <!-- header ends -->
+
+    <!-- home -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>we are your <span>computer services</span></h3>
+            <!-- <p>L T Solutions Private Limited incorporated with CMA on 07 January 2000. The L T Solutions Private Limited is listed in the class of pvtltd company and classified as Non Govt Company. This company is registered at Registrar of Companies(ROC).</p> -->
+        </div>
+
+    </section>
+
+    <!-- home end -->
+
+    <!-- about us -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="{% static 'images/about.jpg'%}" alt="">
+            </div>
+
+            <div class="content">
+                <!-- <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3> -->
+                <h3 style="font-size: x-large;">L T Solutions Private Limited is a Private incorporated on 07 January
+                    2000. It is classified as Non-govt company and is registered at Registrar of Companies, Hyderabad.
+                    Its authorized share capital is Rs. 7,500,000 and its paid up capital is Rs. 5,609,690. It is
+                    inolved in Software publishing, consultancy and supply [Software publishing includes production,
+                    supply and documentation of ready-made (non-customized) software, operating systems software,
+                    business & other applications software, computer games software for all platforms. Consultancy
+                    includes providing the best solution in the form of custom software after analyzing the user?s needs
+                    and problems. Custom software also includes made-to-order software based on orders from specific
+                    users. Also, included are writing of software of any kind following directives of the users;
+                    software maintenance, web-page design].</h3>
+                <!-- <a href="#" class="btn">read more</a> -->
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about end -->
+
+    <!-- counter -->
+
+    <section class="counter">
+
+        <h1 class="heading"> <span>some facts in numbers</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h2 class="count">1500 </h2>
+                <h3>clients</h3>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore maxime accusamus enim.</p> -->
+            </div>
+
+            <div class="box">
+                <h2 class="count">100 </h2>
+                <h3>special tools</h3>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore maxime accusamus enim.</p> -->
+            </div>
+
+            <div class="box">
+                <h2 class="count">2100 </h2>
+                <h3>devices</h3>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore maxime accusamus enim.</p> -->
+            </div>
+
+            <div class="box">
+                <h2 class="count">18 </h2>
+                <h3>years</h3>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore maxime accusamus enim.</p> -->
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- counter ends -->
+
+
+    <!-- services -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading">our <span>services</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{% static 'images/service-1.png' %}" alt="">
+                <h3>IOT services</h3>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt quas.</p> -->
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/service-2.png' %}" alt="">
+                <h3>Real Time AI Services</h3>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt quas.</p> -->
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/service-3.png' %}" alt="">
+                <h3>web based applications</h3>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt quas.</p> -->
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/service-4.png' %}" alt="">
+                <h3>data management</h3>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt quas.</p> -->
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- services end-->
+
+    <!-- faq -->
+
+    <!-- <section class="faq" id="faq">
+
+        <h1 class="heading"><span>questions</span> and <span>answers</span> </h1>
+
+        <div class="accordion-container">
+            
+            <div class="accordion active">
+                <div class="accordion-heading">
+                    <h3>accordion heading 01</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis est pariatur maxime quam provident ipsum ipsam, cumque esse, asperiores consectetur impedit laborum! Sit quibusdam reiciendis soluta facere iusto quisquam culpa?</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>accordion heading 02</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis est pariatur maxime quam provident ipsum ipsam, cumque esse, asperiores consectetur impedit laborum! Sit quibusdam reiciendis soluta facere iusto quisquam culpa?</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>accordion heading 03</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis est pariatur maxime quam provident ipsum ipsam, cumque esse, asperiores consectetur impedit laborum! Sit quibusdam reiciendis soluta facere iusto quisquam culpa?</p>
+            </div>
+
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>accordion heading 04</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis est pariatur maxime quam provident ipsum ipsam, cumque esse, asperiores consectetur impedit laborum! Sit quibusdam reiciendis soluta facere iusto quisquam culpa?</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>accordion heading 05</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis est pariatur maxime quam provident ipsum ipsam, cumque esse, asperiores consectetur impedit laborum! Sit quibusdam reiciendis soluta facere iusto quisquam culpa?</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>accordion heading 06</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis est pariatur maxime quam provident ipsum ipsam, cumque esse, asperiores consectetur impedit laborum! Sit quibusdam reiciendis soluta facere iusto quisquam culpa?</p>
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <!-- faq ends-->
+
+    <!-- reviews -->
+
+    <!-- <section class="reviews" id="reviews">
+
+        <h1 class="heading">clients <span>review</span></h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="images/review-1.png" alt="">
+                    <h3>john deo</h3>
+                    <span>satisfied client</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda beatae non explicabo temporibus at doloribus ut quas, iusto consectetur maxime accusantium dicta sed harum tempore quae nemo nam itaque error?</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/review-2.png" alt="">
+                    <h3>john deo</h3>
+                    <span>satisfied client</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda beatae non explicabo temporibus at doloribus ut quas, iusto consectetur maxime accusantium dicta sed harum tempore quae nemo nam itaque error?</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/review-3.png" alt="">
+                    <h3>john deo</h3>
+                    <span>satisfied client</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda beatae non explicabo temporibus at doloribus ut quas, iusto consectetur maxime accusantium dicta sed harum tempore quae nemo nam itaque error?</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/review-4.png" alt="">
+                    <h3>john deo</h3>
+                    <span>satisfied client</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda beatae non explicabo temporibus at doloribus ut quas, iusto consectetur maxime accusantium dicta sed harum tempore quae nemo nam itaque error?</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/review-5.png" alt="">
+                    <h3>john deo</h3>
+                    <span>satisfied client</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda beatae non explicabo temporibus at doloribus ut quas, iusto consectetur maxime accusantium dicta sed harum tempore quae nemo nam itaque error?</p>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+ -->
+
+    <!-- reviews end-->
+
+    <!-- contact -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span> us</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="{% static 'images/Service 24_7.gif' %}" alt="">
+            </div>
+
+            <form action="">
+
+                <div class="inputBox">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+
+                <div class="message">
+                    <input type="text" placeholder="Subject" required>
+
+                </div>
+
+                <textarea placeholder="Your Message" id="" cols="30" rows="10" required></textarea>
+
+                <input type="submit" value="contact us" class="btn">
+
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- contact end -->
+
+    <!-- footer -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> LT Solutions </h3>
+                <p>Empowering your business with innovative IT solutions for a brighter tomorrow.</p>
+                <!-- <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div> -->
+            </div>
+
+            <div class="box">
+                <h3>help center</h3>
+                <h4>Email</h4>
+                <a href="#" class="link">contact@ltsolutions.com</a>
+
+            </div>
+
+            <div class="box">
+                <h3>quick message</h3>
+                <input type="text" name="" placeholder="enter your name" class="name" required>
+                <input type="email" name="" placeholder="enter your email" class="name" required>
+                <input type="submit" value="subscribe" class="btn">
+            </div>
+
+        </div>
+
+        <div class="credit">copyright by <span>LT Solutions Pvt.Ltd</span> | all rights reserved!</div>
+
+    </section>
+
+
+
+
+    <!-- footer ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logo.png' %}" sizes="1x1">
+    <title>Careers | LT Solutions</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+    <!-- header -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> Careers @ LT Solutions </a>
+
+        <nav class="navbar">
+
+            <a href="{% url 'index' %}">Back to home</a>
+            <!--<a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="#faq">FAQs</a> -->
+            <!-- <a href="#reviews">reviews</a> 
+            <a href="#contact">contact</a>-->
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <!-- header ends -->
+
+    <!-- home -->
+    {% if num == 1 %}
+    <script>
+        Swal.fire({
+            title: 'Success!',
+            text: "You've successfully submitted your application",
+            icon: 'success'
+        })
+    </script>
+    {% elif num == 2 %}
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: 'If issue still persists, contact hr.ltsolpvt@gmail.com'
+        })
+    </script>
+    {% endif %}
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>we are <span>Hiring!!</span></h3>
+            <p style="font-size: 17px;">we are open for multiple roles and looking for young and passionate people to <a
+                    href="#contact">join us.</a></p>
+        </div>
+
+    </section>
+
+    <!-- home end -->
+
+
+    <!-- reviews -->
+
+    <section class="reviews" id="reviews">
+
+        <h1 class="heading">JOB OPENINGS</h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="{% static 'images/da.png' %}" alt="">
+                    <h3>Data Analyst</h3>
+                    <p>We are seeking a highly skilled data analyst to join our team. The successful candidate will be
+                        responsible for analyzing large datasets, identifying trends and patterns. The candidate should
+                        have strong background in statistics, data analysis, and data visualization.</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="{% static 'images/python.jpg' %}" alt="">
+                    <h3>Python Developer</h3>
+                    <p>We are currently seeking talented individuals to join our team as Python Developers. As a Python
+                        Developer, you will be responsible for designing, developing, and maintaining high-quality
+                        software applications using Python programming language.</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="{% static 'images/php.jpg' %}" alt="">
+                    <h3>PHP & Laravel Developer</h3>
+                    <p>We are excited to announce that our company is currently seeking talented individuals to join our
+                        team as PHP and Laravel developers. If you are passionate about PHP and Laravel development and
+                        are looking for an exciting new opportunity, we encourage you to apply for this position.</p>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- reviews end-->
+
+    <!-- contact -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>apply</span> for an oppurtunity</h1>
+
+        <div class="row">
+
+            <!-- <div class="image">
+                <img src="{% static 'images/Service 24_7.gif' %}" alt="">
+            </div> -->
+
+            <form action="{% url 'career' %}" method="post" autocomplete="off">
+                {% csrf_token %}
+
+                <div class="inputBox">
+                    <input type="text" placeholder="First Name" name="first_name" required>
+                    <input type="text" placeholder="Last Name" name="last_name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="number" placeholder="Mobile Number" name="mobile" required>
+                </div>
+
+                <div class="message">
+                    <select name="qualification" id="prob" required>
+                        <option value="select">Select your qualification</option>
+                        <option value="UG">Under Graduate(UG)</option>
+                        <option value="PG">Post Graduate(PG)</option>
+                        <option value="MCA">MCA</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+
+                <textarea placeholder="Describe yourself (min. 30 words)" name="describe" cols="30" rows="10" required></textarea>
+                <div class="message">
+                    <h2>Resume</h2>
+                    <input type="file" accept="application/pdf" required>
+                </div>
+
+                <input type="submit" value="apply" class="btn">
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact end -->
+
+    <!-- footer -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> LT Solutions </h3>
+                <p>Empowering your business with innovative IT solutions for a brighter tomorrow.</p>
+                <!-- <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div> -->
+            </div>
+
+            <div class="box">
+                <h3>help center</h3>
+                <h4>Email</h4>
+                <a href="#" class="link">contact@Ltsolutions.com</a>
+            </div>
+
+            <div class="box">
+                <h3>quick message</h3>
+                <input type="text" name="" placeholder="enter your name" class="name">
+                <input type="email" name="" placeholder="enter your email" class="name">
+                <input type="submit" value="subscribe" class="btn">
+            </div>
+
+        </div>
+
+        <div class="credit">copyright by <span>LT Solutions Pvt.Ltd</span> | all rights reserved!</div>
+
+    </section>
+
+
+
+    <!-- footer ends -->
+
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
